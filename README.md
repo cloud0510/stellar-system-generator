@@ -18,6 +18,14 @@ npm run build      # 本番ビルド (dist/)
 - ページ下部「seed と開発者・先生向けツール」で、型を直接指定した生成（`seed@O` 形式）と seed からの再生成ができる。
   型指定生成は確率どおりではないため、観測数には数えない。
 
+## 公開（GitHub Pages）
+
+`.github/workflows/deploy.yml` により、`main` に push するたびにテスト → ビルド → GitHub Pages への公開が自動で行われる（テストが失敗したら公開しない）。
+
+- 初回のみ、リポジトリの Settings → Pages → Source を「GitHub Actions」にする。
+- 公開URL: https://cloud0510.github.io/stellar-system-generator/
+- 手動で再公開したいときは、Actions タブの「Deploy to GitHub Pages」→「Run workflow」。
+
 ## 技術構成
 
 React 19 + TypeScript + Vite。バックエンドなし（生成・履歴・お気に入りはすべてブラウザ内、保存は localStorage）。
