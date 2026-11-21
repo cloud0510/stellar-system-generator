@@ -1,0 +1,26 @@
+# 依存パッケージ（npm install で再生成）
+node_modules/
+
+# ビルド結果（npm run build で再生成）
+dist/
+
+# Vite のキャッシュ
+.vite/
+
+# ログ
+*.log
+npm-debug.log*
+
+# 環境変数ファイル（秘密情報を含みうる）
+.env
+.env.*
+
+# OS・エディタが作るファイル
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Claude Code の個人用設定（launch.json は共有用に残す）
+.claude/settings.local.json
